@@ -13,8 +13,14 @@ public sealed class ProviderStatesController(ICustomerRepository customers) : Co
     {
         customers.ResetPactCustomers();
 
+        var state = request.State ?? string.Empty; // For some consumer state matching may not be required
+
         var customer = request.State switch
         {
+            // Fallback data for interactions without .Given() in consumer pact
+            "" => new CustomerResponse(
+                101, "Ava", "Shah", "ava@example.com", "Approved"),
+
             "Customer has null email and null state" =>
                 new CustomerResponse(
                     101, "Ava", "Shah", null, null),
