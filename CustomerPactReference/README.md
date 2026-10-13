@@ -10,16 +10,19 @@ and xUnit.
   provider verification.
 - `CustomerConsumer.Tests/` defines the consumer expectation and writes
   `pacts/CustomerConsumer-CustomerApi.json`.
+- `CustomerConsumerNew.Tests/` defines the another consumer expectation and writes
+  `pacts/CustomerConsumerNew-CustomerApi.json`.
 - `CustomerProvider.Tests/` starts the actual API on an ephemeral local port and
   verifies the checked-in Pact against it.
 
 ## Run
 
-From this directory, run the consumer test first to regenerate the Pact, then
+From this directory, run the consumers test first to regenerate the Pact, then
 verify the provider:
 
 ```sh
 dotnet test CustomerConsumer.Tests/CustomerConsumer.Tests.csproj
+dotnet test CustomerConsumerNew.Tests/CustomerConsumerNew.Tests.csproj
 dotnet test CustomerProvider.Tests/CustomerProvider.Tests.csproj
 ```
 
