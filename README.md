@@ -591,9 +591,12 @@ CustomerPactReference/
 │   ├── Models/
 │   │   └── CustomerResponse.cs
 │   ├── Repositories/
+│   │   ├── ICustomerRepository.cs
 │   │   └── CustomerRepository.cs
 │   └── Program.cs
 ├── CustomerConsumer.Tests/
+│   └── ...
+├── CustomerConsumerNew.Tests/
 │   └── ...
 ├── CustomerProvider.Tests/
 │   └── ...
