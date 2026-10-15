@@ -462,24 +462,28 @@ the versions it will interact with.
 
 ### Recommended placement
 
-**Consumer CI** 1. Build the consumer. 2. Run unit tests. 3. Run
-consumer Pact tests. 4. Publish the generated Pact contract to a Pact
-Broker (if used).
+**Consumer CI** 
+1. Build the consumer.
+2. Run unit tests.
+3. Run consumer Pact tests.
+4. Publish the generated Pact contract to a Pact Broker (if used).
 
-**Provider CI** 1. Build the provider. 2. Run unit and integration
-tests. 3. Start the provider in a controlled test environment. 4.
-Configure provider-state setup. 5. Verify the relevant consumer
-contracts. 6. Publish verification results to the Pact Broker (if used).
+**Provider CI** 
+1. Build the provider.
+2. Run unit and integration tests.
+3. Start the provider in a controlled test environment.
+4. Configure provider-state setup.
+5. Verify the relevant consumer contracts.
+6. Publish verification results to the Pact Broker (if used).
 
-**Before deployment** - Check compatibility for the versions that will
-actually coexist. - Use the Pact Broker's deployment/release workflow
-and compatibility checks where available. - Avoid deploying solely
-because a Pact file exists; a consumer-generated contract is not proof
-that the provider has passed verification.
+**Before deployment** 
+- Check compatibility for the versions that will actually coexist.
+- Use the Pact Broker's deployment/release workflow and compatibility checks where available.
+- Avoid deploying solely because a Pact file exists; a consumer-generated contract is not proof that the provider has passed verification.
 
-**After deployment** - Continue monitoring service health and business
-behavior. - Contract tests cannot detect every runtime, infrastructure,
-security, performance, or business-process problem.
+**After deployment** 
+- Continue monitoring service health and business behavior.
+- Contract tests cannot detect every runtime, infrastructure, security, performance, or business-process problem.
 
 ### Do I need a Pact Broker?
 
